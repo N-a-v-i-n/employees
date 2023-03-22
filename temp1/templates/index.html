@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my_employees</title>
+    <style>
+        button {
+            width: 150px;
+            height: 40px;
+            margin: 20px;
+            border-radius: 10px;
+            cursor: pointer;   
+            text-align: center;  
+        }
+        button:hover{
+            background-color: black;
+            color: white;
+            /* transition: 5px;  */
+        }
+        div{
+            text-align: center;
+            height: 100%
+        
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+    <h1>EMPLOYEES</h1> 
+    <button type="button" onclick="window.location.href='http://127.0.0.1:8000/view_all'">View All Employees</button>
+    <button type="button"onclick="window.location.href='http://127.0.0.1:8000/add_emp'" >Add Employee</button>
+    <!-- <button type="button" onclick="window.location.href='http://127.0.0.1:8000/update_emp'" >Update Employee</button> -->
+    <button type="button" onclick="window.location.href='http://127.0.0.1:8000/delete_emp'" >Delete Employee</button>
+    <button type="button" onclick="window.location.href='http://127.0.0.1:8000/filter_emp'" >Filter Employees</button>
+    </div>
+</body>
+</html>

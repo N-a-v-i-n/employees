@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>otp page</title>
+</head>
+<body>
+    <form action="otp_verify/" method="post">
+        <table>
+            {% csrf_token %}
+            {% for x in temp %}
+            <tr>
+                <input type="email" value="{{x}}" name="otp_email1"  >
+
+                <label for="otp_verify1">verify otp received on Email id: </label> 
+
+                <input type="text" name="otp_verify1">
+                <button type="sumbit">Verify</button>
+            {% endfor %}
+            </tr>
+            
+        </table>
+
+    
+
+        
+
+    </form>
+</body>
+</html>

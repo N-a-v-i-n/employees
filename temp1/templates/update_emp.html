@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update</title>
+
+    <style>
+        div{
+            text-align: center;
+        }
+        input{
+            width:30%;
+            text-align: center;
+        }
+        input:hover{
+            /* border: 1px solid black; */
+            background-color: green;
+            color: black;
+         }
+        button{
+            width: 10%;
+            background-color: rgb(40, 40, 190);
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div>
+        <h1>
+            Updating Employee Details
+        </h1>
+        <form action="" method="post">
+        {% csrf_token %}
+        {% for x in searched %}
+        <label for="first_name">First Name</label><br>
+        <input type="text" name="first_name" value="{{x.first_name}}"><br><br><br>
+
+        <label for="last_name">Last Name</label><br>
+        <input type="text" name="last_name" value="{{x.last_name}}" ><br><br><br>
+
+        <label for="email_id">Email ID</label><br>
+        <input type="text" name="email_id" value="{{x.email_id}}"><br><br><br>
+
+        <button type="submit" >Submit</button>
+        {% endfor %}
+    </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delete_emp</title>
+    <style>
+        div{
+            text-align: center;
+        }
+        input{
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h1>Remove Employee</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+    <input type="email" name="email_id" placeholder="Employee Email-ID" > <br>
+    <button type="submit">Remove</button>
+
+    </form>
+    
+</div>
+</body>
+</html>
